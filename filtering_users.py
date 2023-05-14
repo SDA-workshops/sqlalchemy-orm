@@ -26,6 +26,7 @@ def main():
     print(result)
 
     print('------------------')
+    # Advanced filtering
     query = session.query(
         User.id, User.email, User.creation_date
     ).filter(
