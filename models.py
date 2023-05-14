@@ -1,9 +1,11 @@
 from sqlalchemy import Column, String, Integer, create_engine
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
 engine = create_engine(
     "mysql+pymysql://root:qwerty@localhost:33061/company"
 )
+Session = sessionmaker(bind=engine)
 Base = declarative_base(bind=engine)
 
 
